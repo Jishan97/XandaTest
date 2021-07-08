@@ -1,16 +1,16 @@
-import React from 'react'
+import React from "react";
 // Product card
-import CardMain from '../card/CardMain'
+import CardMain from "../card/CardMain";
 // Cart
-import Cart from '../cart/Cart'
+import Cart from "../cart/Cart";
 
-const Home = ()=>{
-    return (
-            <div>
-                <CardMain/>
-                <Cart/>
-            </div>
-    )
-}
+const Home = () => {
+  return (
+    <div>
+      <CardMain />
+      <Cart />
+    </div>
+  );
+};
 
 export default Home;

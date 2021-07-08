@@ -32,7 +32,7 @@ const Card = () => {
 
   return products.map((one) => {
     return (
-      <div className={`card   show${one.id}`} style={{ backgroundImage: 'url(' + controllerImage + ')', opacity:`${one.quantity > 0? 1 : 0.4}`    }} >
+      <div key={one.id} className={`card   show${one.id}`} style={{ backgroundImage: 'url(' + controllerImage + ')', opacity:`${one.quantity > 0? 1 : 0.4}`    }} >
         <div className="card-item-left">
           <img src={one.image} height="180" alt="" />
         </div>
