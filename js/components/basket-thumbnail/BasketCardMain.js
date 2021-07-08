@@ -4,9 +4,15 @@ import BasketCard from '../basket-thumbnail/BasketCard'
 import { Link } from 'react-router-dom';
 //total amount
 import TotalAmount from '../TotalAmount';
+import CartContext from '../../context/CartContext';
+//context 
+
 
 const BasketCardMain = ()=>{
  
+    const cart_context = useContext(CartContext);
+
+    const {cartProducts } = cart_context;
     return(
 
         <div className="basket-card">
@@ -17,7 +23,9 @@ const BasketCardMain = ()=>{
            <TotalAmount/>
 
       
-            <Link className="btn-continue" to="/checkout">Continue</Link>
+        {
+             cartProducts.length >0 ? <Link className="btn-continue" to="/checkout">Continue</Link> : ''
+        }  
         
         </div>
     )
